@@ -1,0 +1,3 @@
+class Reviews < ApplicationRecord
+    
+end
