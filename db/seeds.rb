@@ -9,27 +9,27 @@ About.new({
 
 Apps.new({
     name:'Cricket Standings',
-    description:'A --/ B --/ C',
+    description:'Object Oriented Ruby | Open_URI | Nokogiri',
     source:'https://github.com/JattCoder/CWC-Standings.git',
     live:'https://drive.google.com/file/d/1BAnmqnWjSTKrYliZQ-h05GlbB8x1ynom/view?usp=sharing'}).save
 Apps.new({
     name:'Tesla Find-Us',
-    description:'A --/ B --/ C',
+    description:'Object Oriented Ruby | Sinatra | MVC | User Info Encryption | SQL3 ActiveRecord | Algorithms',
     source:'https://github.com/JattCoder/Meet_Up.git',
     live:'https://drive.google.com/file/d/1KJb345-y7lyJCv4KMCLZsiS8uUubJHud/view?usp=sharing'}).save
 Apps.new({
     name:'Google',
-    description:'A --/ B --/ C',
+    description:'Ruby on Rails | MVC | SQL3 ActiveRecord | RestFul URLs | User Info Encryption | !Scaffold',
     source:'https://github.com/JattCoder/Google.git',
     live:'https://drive.google.com/file/d/1ogWOYmlLWx5iZdI9Ea5yyEaQnhwKPgsu/view?usp=sharing'}).save
 Apps.new({
     name:'Meet Up',
-    description:'A --/ B --/ C',
+    description:'JS | HTML5 | CSS | ES6+ | Rails API | SQL3 ActiveRecord | Restful URLs | Google Auth | Google Maps, Direction and more APIs',
     source:'https://github.com/JattCoder/Meet_Up.git',
     live:'https://drive.google.com/file/d/18RXiSXECMGutCQXvij9v7P6eoOEE8Cd1/view?usp=sharing'}).save
 Apps.new({
     name:'Portfolio',
-    description:'A --/ B --/ C',
+    description:'React | Redux | SASS | ES6+ | Rails API | SQL3 ActiveRecord | Restful URLs | Algorithms',
     source:'https://github.com/JattCoder/portfolio.git',
     live:'https://drive.google.com/file/d/1lXCpbrt6WjcxwPsjmgwTvLiAdSD_zdr8/view?usp=sharing'}).save
 
