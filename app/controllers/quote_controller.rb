@@ -1,5 +1,6 @@
 class QuoteController < ApplicationController
     def index
-        render json: Quote.all[rand(Quote.all.length)]
+        random = Random.rand(Quote.all.length-1)
+        render json: Quote.all[random]
     end
 end
