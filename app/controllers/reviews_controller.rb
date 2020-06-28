@@ -6,7 +6,8 @@ class ReviewsController < ApplicationController
 
     def create
         if(!Reviews.find_by(review: params[:review]))
-            Reviews.new(review: params[:review]).save
+            Reviews.new(review: params[:review]
+            ).save
         end
         render json: true
     end
