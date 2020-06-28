@@ -37,7 +37,7 @@ module Portfolio
     config.middleware.use ActionDispatch::Session::CookieStore, key: '_portfolio_key'
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'localhost:3000'
+        origins '*'
         resource(
           '*',
           headers: :any,
