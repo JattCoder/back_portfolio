@@ -7,7 +7,7 @@ class HomeController < ApplicationController
                     description: app.description,
                     source: app.source,
                     live: app.live,
-                    images: Images.where(app_id: app.id)
+                    images: null,
                 }
         end
         render json: {
