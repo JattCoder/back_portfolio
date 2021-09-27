@@ -19,9 +19,16 @@ ActiveRecord::Schema.define(version: 2020_06_18_381955) do
 
   create_table "apps", force: :cascade do |t|
     t.string "name"
+    t.string "icon"
+    t.string "shortDesc"
     t.text "description"
-    t.string "source"
-    t.string "live"
+    t.string "images"
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.string "description"
   end
 
   create_table "homes", force: :cascade do |t|
@@ -31,9 +38,11 @@ ActiveRecord::Schema.define(version: 2020_06_18_381955) do
     t.string "email"
   end
 
-  create_table "images", force: :cascade do |t|
-    t.integer "app_id"
-    t.string "url"
+  create_table "jobs", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.string "title"
+    t.string "responsibility"
   end
 
   create_table "languages", force: :cascade do |t|
