@@ -1,15 +1,15 @@
 class HomeController < ApplicationController
     def index
         apps = []
-        Apps.all.each do |app|
-            apps << {
-                    name: app.name,
-                    description: app.description,
-                    source: app.source,
-                    live: app.live,
-                    images: null,
-                }
-        end
+        # Apps.all.each do |app|
+        #     apps << {
+        #             name: app.name,
+        #             description: app.description,
+        #             source: app.source,
+        #             live: app.live,
+        #             images: null,
+        #         }
+        # end
         render json: {
             home: Home.all[0],
             about: About.all[0],
