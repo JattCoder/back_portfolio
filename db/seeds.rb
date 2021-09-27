@@ -4,8 +4,9 @@ Home.new({
     github:'https://github.com/JattCoder',
     email:'harmandeepmand.hm@gmail.com'}).save
 About.new({
+    pic: '../myPic/me.png',
     name:'Harmandeep S Mand',
-    description:'My Name is Harmandeep S Mand, i am Full-Stack Software Engineer in Cleveland, OH. Graduated from Flatiron School. I enjoy building live Application for any platform, either its mobile, desktop or web.'}).save
+    description:'React and React-Native developer with 2 years of experience and a strong understanding of common web technologies, languages, and frameworks, leading cross-functional teams to complete projects on time while meeting quality benchmarks.'}).save
 
 # Apps.new({
 #     name:'Cricket Standings',
@@ -81,6 +82,18 @@ Languages.new({
     name: 'C++',
     img: '../Languages/cplusplus.svg'
 }).save
+
+Jobs.new({name: "C's Beverage and Deli", icon: '', title: 'Manager', responsibility: ''}).save
+Jobs.new({name: 'Freelance', icon: '', title: 'Full-Stack Software Developer', responsibility: ''}).save
+Jobs.new({name: 'Walletifai', icon: '../Work/walletifai.png', title: 'React-Native Developer', responsibility: ''}).save
+
+Education.new({name: 'Cleveland State University', icon: '../Schools/csu.png', description: 'CS Courses: C, Java, Data Structures and Algorithms and JavaScript'}).save
+Education.new({name: 'Arizona State University', icon: '../Schools/asu.png', description: 'CS Courses: JavaScript (HTML & CSS), Python, C++'}).save
+Education.new({name: 'University of California San Diego', icon: '../Schools/san.png', description: 'Algorithmic Toolbox'}).save
+Education.new({name: 'Duke University', icon: '../Schools/duke.png', description: 'Java - Arrays, List Structured Data'}).save
+Education.new({name: 'Duke University', icon: '../Schools/duke.png', description: 'Programming Foundation with JavaScript, HTML and CSS'}).save
+Education.new({name: 'University of Michigan', icon: '../Schools/michigan.png', description: 'Interactivity with JavaScript'}).save
+Education.new({name: 'Flatiron School', icon: '../Schools/flatiron.png', description: 'Full-Stack Software Engineering: Ruby, Sinatra, Rails, SQL, JS-ES6+, React and Redux'}).save
 
 Quote.new({quote:'How does a project get to be a year late?... One day at a time.'}).save
 Quote.new({quote:'Programming can be fun, so can cryptography; however they should not be combined.'}).save

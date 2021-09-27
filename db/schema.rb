@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_06_18_381955) do
 
   create_table "abouts", force: :cascade do |t|
+    t.string "pic"
     t.string "name"
     t.text "description"
   end
