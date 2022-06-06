@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/newJob', to: 'jobs#newJob'
   post '/newJob', to: 'jobs#newJob'
   get '/googlePlaces', to: 'googleplaces#searchPlace'
+  get '/googlePlacesRandom', to: 'googleplaces#randomPlaces'
 end
