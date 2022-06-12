@@ -168,6 +168,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   google_places
+  httparty (~> 0.20.0)
   listen (~> 3.2)
   pg
   puma (~> 4.1)
