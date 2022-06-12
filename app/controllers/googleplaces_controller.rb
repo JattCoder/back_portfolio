@@ -56,7 +56,7 @@ class GoogleplacesController < ApplicationController
 
     def randomPlaces
         if params[:key] && params[:lat] && params[:lng]
-            @client = GooglePlaces::Client.new(params[:key])
+            @client = GooglePlaces::Client.new('AIzaSyAR8TWRVg_themcDKGwjJ3w696oLs3epz4')
             places = @client.spots(params[:lat], params[:lng])
             distances = getDistance("#{params[:lat]}, #{params[:lng]}", places)
             render json: assignDistanceToSpicificPlace(places, JSON.parse(distances))
