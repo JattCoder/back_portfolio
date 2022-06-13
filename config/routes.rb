@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post '/newJob', to: 'jobs#newJob'
   get '/googlePlaces', to: 'googleplaces#searchPlace'
   get '/googlePlacesRandom', to: 'googleplaces#randomPlaces'
+  get '/googleAutoComplete', to: 'googleplaces#autoComplete'
 end

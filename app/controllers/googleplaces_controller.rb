@@ -1,5 +1,9 @@
 class GoogleplacesController < ApplicationController
 
+    def getApi
+        'AIzaSyAR8TWRVg_themcDKGwjJ3w696oLs3epz4'
+    end
+
     def getLatsAndLongs(locations)
         latLng = []
         locations.length.times do |locationIndex|
@@ -18,7 +22,7 @@ class GoogleplacesController < ApplicationController
 
     def getDistance(mySpot, locations)
         destinationSpots = convertArraytoStringDestinations(getLatsAndLongs(locations))
-        response = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?destinations=#{destinationSpots}&origins=#{mySpot}&key=AIzaSyAR8TWRVg_themcDKGwjJ3w696oLs3epz4")
+        response = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?destinations=#{destinationSpots}&origins=#{mySpot}&key=#{getApi}")
         response.body
     end
 
@@ -35,7 +39,7 @@ class GoogleplacesController < ApplicationController
 
     def searchPlace
         if params[:query]
-            @client = GooglePlaces::Client.new('AIzaSyAR8TWRVg_themcDKGwjJ3w696oLs3epz4')
+            @client = GooglePlaces::Client.new(getApi)
             if @client
                 if params[:query].include?(' in ')
                     places = @client.spots_by_query(params[:query])
@@ -56,12 +60,28 @@ class GoogleplacesController < ApplicationController
 
     def randomPlaces
         if params[:lat] && params[:lng]
-            @client = GooglePlaces::Client.new('AIzaSyAR8TWRVg_themcDKGwjJ3w696oLs3epz4')
+            @client = GooglePlaces::Client.new(getApi)
             places = @client.spots(params[:lat], params[:lng])
             distances = getDistance("#{params[:lat]}, #{params[:lng]}", places)
             render json: assignDistanceToSpicificPlace(places, JSON.parse(distances))
         else 
             render json: { 'error': 'Invalid Params. Please use -> key, lat and lng'}
+        end
+    end
+
+    def autoComplete
+        if params[:query] && params[:lat] && params[:lng]
+            @client = GooglePlaces::Client.new(getApi)
+            render json: @client.predictions_by_input(
+                params[:query],
+                lat: params[:lat],
+                lng: params[:lng],
+                radius: 20000000,
+                types: 'geocode',
+                language: I18n.locale,
+            )
+        else
+            render json: {'error': 'query does not exists'}
         end
     end
 end
