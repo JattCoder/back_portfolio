@@ -39,6 +39,20 @@ ActiveRecord::Schema.define(version: 2020_06_18_381955) do
     t.string "email"
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "barcode"
+    t.string "name"
+    t.string "size"
+    t.string "pack"
+    t.integer "inStock"
+    t.string "price"
+    t.string "cost"
+    t.boolean "tax"
+    t.string "type"
+    t.string "deals"
+    t.string "description"
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "name"
     t.string "icon"
