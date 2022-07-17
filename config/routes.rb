@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/googlePlaces', to: 'googleplaces#searchPlace'
   get '/googlePlacesRandom', to: 'googleplaces#randomPlaces'
   get '/googleAutoComplete', to: 'googleplaces#autoComplete'
+  get '/allItems', to: 'items#getAllItems'
   get '/singleItem', to: 'items#getSingleItem'
   get '/newItem', to: 'items#saveNewItem'
 end

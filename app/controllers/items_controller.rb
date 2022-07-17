@@ -1,5 +1,9 @@
 class ItemsController < ApplicationController
 
+    def getAllItems
+        render json: Items.all
+    end
+
     def getSingleItem
         if params[:barcode]
             render json: Items.find_by(barcode: params[:barcode])
