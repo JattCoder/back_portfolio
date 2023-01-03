@@ -10,7 +10,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'puma', '~> 4.1'
 gem 'tesla-api'
 gem 'google_places'
-gem 'httparty', '~> 0.20.0'
+gem 'httparty', '~> 0.21.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
